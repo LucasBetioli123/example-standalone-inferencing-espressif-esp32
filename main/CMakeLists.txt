@@ -4,12 +4,12 @@ set(MODEL_FOLDER ..)
 set(EI_SDK_FOLDER ../edge-impulse-sdk)
 
 if(NOT CMAKE_BUILD_EARLY_EXPANSION)
-    # enables generic ESP-NN optimizations by Espressif
-    add_definitions(-DEI_CLASSIFIER_TFLITE_ENABLE_ESP_NN=1)
-    # conditionally enable ESP32S3 specific optimizations
-    if(${IDF_TARGET} STREQUAL "esp32s3")
-        add_definitions(-DEI_CLASSIFIER_TFLITE_ENABLE_ESP_NN_S3=1)
-    endif()
+    # # enables generic ESP-NN optimizations by Espressif
+    # add_definitions(-DEI_CLASSIFIER_TFLITE_ENABLE_ESP_NN=1)
+    # # conditionally enable ESP32S3 specific optimizations
+    # # if(${IDF_TARGET} STREQUAL "esp32s3")
+    # #     add_definitions(-DEI_CLASSIFIER_TFLITE_ENABLE_ESP_NN_S3=1)
+    # # endif()
 endif()
 
 OPTION(DEFINE_DEBUG
@@ -28,6 +28,10 @@ set(include_dirs
     ${MODEL_FOLDER}/model-parameters
     ${EI_SDK_FOLDER}
 )
+
+set(EXTRA_COMPONENT_DIRS $ENV{IDF_PATH}/components/esp-dsp)
+
+#
 
 include(${EI_SDK_FOLDER}/cmake/utils.cmake)
 

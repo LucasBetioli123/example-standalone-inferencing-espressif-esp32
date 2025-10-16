@@ -16,3 +16,9 @@ idf_build_set_property(COMPILE_OPTIONS "-Wno-error=uninitialized" APPEND)
 idf_build_set_property(COMPILE_OPTIONS "-Wno-stringop-truncation" APPEND)
 idf_build_set_property(COMPILE_OPTIONS "-Wno-deprecated-declarations" APPEND)
 idf_build_set_property(COMPILE_OPTIONS "-fno-if-conversion" APPEND)
+
+
+
+include(edge-impulse-sdk/cmake/utils.cmake)
+
+RECURSIVE_FIND_FILE_APPEND(MODEL_SOURCE "tflite-model" "*.cpp")
