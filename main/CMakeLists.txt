@@ -29,7 +29,7 @@ set(include_dirs
     ${EI_SDK_FOLDER}
 )
 
-set(EXTRA_COMPONENT_DIRS $ENV{IDF_PATH}/components/esp-dsp)
+set(EXTRA_COMPONENT_DIRS $ENV{IDF_PATH}/managed_components/espressif__esp-dsp)
 
 #
 
