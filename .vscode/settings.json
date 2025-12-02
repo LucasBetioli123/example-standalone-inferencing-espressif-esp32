@@ -1,3 +1,3 @@
 {
-    "idf.pythonInstallPath": "/home/alliage/.espressif/python_env/idf5.5_py3.11_env/bin/python"
+    "idf.pythonInstallPath": "/home/alliage/anaconda3/bin/python"
 }
